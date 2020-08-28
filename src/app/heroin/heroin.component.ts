@@ -13,8 +13,9 @@ import { Component, OnInit } from '@angular/core';
   [ngClass]="{online:getOnline(test)}">{{test}}</p>
   `,
   styles:[
-    `
-    color:pink;
+    `.online{
+    color:hotpink;
+    }
     `
   ]
 })
