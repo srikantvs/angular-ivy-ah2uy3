@@ -2,12 +2,19 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-heroin',
-  templateUrl: './heroin.component.html',
+  template:
+  `   <button (click)="getStatus()">Click</button>
+
+    <p *ngIf="onToggle()">Secret Recipe</p>
+
+
+  <p *ngFor="let test of logs" 
+  [ngStyle]="{backgroundColor:getColor(test)}"
+  [ngClass]="{online:getOnline(test)}">{{test}}</p>
+  `,
   styles:[
     `
-      .online{
-        color:white;
-      }
+    color:pink;
     `
   ]
 })
